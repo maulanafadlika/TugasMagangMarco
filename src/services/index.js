@@ -1,0 +1,28 @@
+
+module.exports = {
+    ActivityLogService: require('./activity-log'),
+    AuthenticationService: require('./authentication'),
+    CommentService: require('./comment'),
+    CustomerService: require('./customer'),
+    GroupService: require('./group'),
+    MenuService: require('./menu'),
+    ParameterService: require('./parameter'),
+    ProjectService: require('./project'),
+    ProjectAssigneeService: require('./project-assignee'),
+    ProjectStatusService: require('./project-status'),
+    PurchaseOrderService: require('./purchase-order'),
+    ReportActivityService: require('./report-activity'),
+    ReportRewriteTaskService: require('./report-rewrite-task'),
+    ReportTimeFrameProjectService: require('./report-timeframe-project'),
+    ReportUserTaskService: require('./report-user-task'),
+    StatusService: require('./status'),
+    SubtasklistService: require('./subtasklist'),
+    SummaryService: require('./summary'),
+    TasklistService: require('./tasklist'),
+    UserService: require('./user'),
+    GoogleAuthService: require('./google-auth'),
+    ReportAssignmentService: require('./report-assignment'),
+    ProjectCheckpointService : require('./project-checkpoint'),
+    BlastService : require('./blast'),
+    ForecastPrincipalService : require('./forecast-principal')
+}
