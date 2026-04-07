@@ -53,6 +53,10 @@ class ProjectService {
         // }
 
         
+        if (!bodyRequest.pm_id || String(bodyRequest.pm_id).trim() === "") {
+            throw new CustomError("pm_id field is required", 400);
+        }
+
         let inputRequest = {
             id: await generateProjectId('PRJ'),
             project_name : bodyRequest.project_name,
@@ -67,7 +71,7 @@ class ProjectService {
             updated_by: bodyRequest.created_by,
             fase : bodyRequest.fase || 0,
             division : bodyRequest.division,
-            pm_id: bodyRequest.pm_id ?? bodyRequest.created_by
+            pm_id: bodyRequest.pm_id
         };
 
         const dataPO = await PurchaseOrder.findAll();

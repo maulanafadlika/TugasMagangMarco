@@ -31,8 +31,10 @@ const createProjectObject = {
     "any.required": "created_by field is required",
     "string.empty": "created_by field value cannot be empty",
   }),
-  pm_id: Joi.string().allow(null, "").messages({
+  pm_id: Joi.string().trim().required().messages({
     "string.base": "pm_id value must be a string",
+    "any.required": "pm_id field is required",
+    "string.empty": "pm_id field value cannot be empty",
   }),
 };
 
